@@ -13,15 +13,7 @@ export default {
     },
     module: {
         rules: [
-            {
-        test: /\.(js|jsx|ts|tsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: "babel-loader",
-        options: { 
-          // presets: ["@babel/env"],
-          presets: ["@babel/env", "@babel/preset-react", "@babel/preset-typescript"]
-        }
-      },
+            { test: (/\.(js|jsx)$/: RegExp), use: 'babel-loader', exclude: (/node_modules/: RegExp) },
         ],
     },
     devtool: (isProd ? false : 'source-map': boolean | string),
