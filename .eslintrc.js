@@ -19,11 +19,12 @@ module.exports = {
     ],
     "rules": {
     },
-    settings: {
-      react: {
-        version: "detect"
+    "settings": {
+      "react": {
+        "version": "detect"
       }
     },
     "extends": ["plugin:jest/recommended"],
-    "plugins": ["jest"]
+    "plugins": ["jest"],
+    "parser": "@babel/eslint-parser"
 }
