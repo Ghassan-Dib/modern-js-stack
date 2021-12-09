@@ -1,6 +1,6 @@
 // @flow
 
-export const homePage = () => null;
+export const homePage = (): any => null;
 
 export const helloPage = (): Object => ({
     hello: {
