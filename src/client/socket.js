@@ -18,7 +18,7 @@ export default (store) => {
         socket.emit(IO_CLIENT_HELLO, 'Hello!');
     });
 
-    socket.on(IO_SERVER_HELLO, (message: string) => {
+    socket.on(IO_SERVER_HELLO, (message) => {
         console.log(`[socket.io] Server: ${message}!`);
     });
 
