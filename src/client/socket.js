@@ -10,7 +10,7 @@ import {
 
 const socket = socketIOClient(window.location.host);
 
-export default (store) => {
+export default (store: Object) => {
     socket.on(IO_CONNECT, () => {
         console.log(store, window.location);
         console.log('[socket.io] Connected!');
@@ -18,7 +18,7 @@ export default (store) => {
         socket.emit(IO_CLIENT_HELLO, 'Hello!');
     });
 
-    socket.on(IO_SERVER_HELLO, (message) => {
+    socket.on(IO_SERVER_HELLO, (message: string) => {
         console.log(`[socket.io] Server: ${message}!`);
     });
 
